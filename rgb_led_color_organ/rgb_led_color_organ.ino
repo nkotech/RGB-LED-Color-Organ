@@ -150,6 +150,8 @@ void loop()
    if (spectrumValue[6] > 50){
     newB = spectrumValue[6];
    }
+
+   // I get a lot of noise with G, and this fixes it
    if (newR < 5 && newG < 5 && newB < 100) {
     newG = 0;
     newB = 0;
